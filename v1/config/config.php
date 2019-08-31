@@ -1,6 +1,6 @@
 <?php
-$DB_NAME = '';
-$DB_USER = '';
+$DB_NAME = 'tasksdb';
+$DB_USER = 'root';
 $DB_PWD = '';
 
 $conf = array(
