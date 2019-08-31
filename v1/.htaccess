@@ -1,0 +1,12 @@
+php_flag display_errors on
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^tasks/([0-9]+)$ API/Task.php?taskId=$1 [L]
+RewriteRule ^tasks/complete$ API/Task.php?completed=Y [L]
+RewriteRule ^tasks/incomplete$ API/Task.php?completed=N [L]
+RewriteRule ^tasks/page/([0-9]+)$ API/Task.php?page=$1 [L]
+RewriteRule ^tasks$ API/Task.php [L]
+
